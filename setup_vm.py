@@ -11,13 +11,46 @@ vm_path = vm + '.vm'
 conf = {}
 
 
+names = {
+    'fd': 'Floppy Disk',
+    'hd': 'Hard Disk',
+    'cd': 'CDROM'
+}
+filters = {
+    'fd': '*.img;*.flp;*vfd;*.ima',
+    'hd': '*.img;*.vhd;*.raw;*.qcow;*.qcow2',
+    'cd': '*.iso;*.cdrom'
+}
+last_path = ''
+
+
 def s(param, value):
     conf[param] = value
+
+
+def dialog(filetype, obj):
+    global last_path
+    if not last_path:
+        last_path = os.getcwd()
+    filepath = QtWidgets.QFileDialog.getOpenFileName(
+        MainWindow,
+        f'Select ' +
+        names[filetype],
+        last_path,
+        filters[filetype])[0]
+    obj.setText(filepath)
 
 
 def setup_events():
     ui.cancelButton.clicked.connect(lambda: sys.exit(0))
     ui.okButton.clicked.connect(lambda: sys.exit(on_exit(0)))
+    ui.fdaButton.clicked.connect(lambda: dialog('fd', ui.fdaEdit))
+    ui.fdbButton.clicked.connect(lambda: dialog('fd', ui.fdbEdit))
+    ui.hdaButton.clicked.connect(lambda: dialog('hd', ui.hdaEdit))
+    ui.hdbButton.clicked.connect(lambda: dialog('hd', ui.hdbEdit))
+    ui.hdcButton.clicked.connect(lambda: dialog('hd', ui.hdcEdit))
+    ui.hddButton.clicked.connect(lambda: dialog('hd', ui.hddEdit))
+    ui.cdButton.clicked.connect(lambda: dialog('cd', ui.cdEdit))
 
 
 def process_config(c):
