@@ -598,7 +598,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>Accel KVM</string>
+       <string>Use KVM</string>
       </property>
      </widget>
      <widget class="QCheckBox" name="mtkvmEdit">
@@ -964,6 +964,110 @@
      <attribute name="title">
       <string/>
      </attribute>
+     <widget class="QCheckBox" name="cs4231a">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>CS4231A</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="hda">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Intel HD Audio</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="adlib">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Yamaha YM3812 (OPL2)</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="pcspk">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>PC speaker</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="ac97">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Intel 82801AA AC97 Audio</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="sb16">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Creative Sound Blaster 16</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="gus">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Gravis Ultrasound GF1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="es1370">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>ENSONIQ AudioPCI ES1370</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="drives">
      <attribute name="icon">

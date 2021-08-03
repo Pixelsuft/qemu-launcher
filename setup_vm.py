@@ -45,6 +45,14 @@ def process_config(c):
     ui.displayEdit.setCurrentText(c['display'])
     ui.sdlEdit.setChecked(c['sdl'])
     ui.vncEdit.setText(c['vnc'])
+    ui.sdlEdit.setChecked(c['sdl'])
+    ui.cs4231a.setChecked(c['cs4231a'])
+    ui.hda.setChecked(c['hda'])
+    ui.adlib.setChecked(c['adlib'])
+    ui.sb16.setChecked(c['sb16'])
+    ui.pcspk.setChecked(c['pcspk'])
+    ui.es1370.setChecked(c['es1370'])
+    ui.gus.setChecked(c['gus'])
 
 
 def apply_config():
@@ -72,6 +80,14 @@ def apply_config():
     s('display', ui.displayEdit.currentText())
     s('sdl', ui.sdlEdit.isChecked())
     s('vnc', ui.vncEdit.text())
+    s('cs4231a', ui.cs4231a.isChecked())
+    s('hda', ui.hda.isChecked())
+    s('adlib', ui.adlib.isChecked())
+    s('ac97', ui.ac97.isChecked())
+    s('sb16', ui.sb16.isChecked())
+    s('pcspk', ui.pcspk.isChecked())
+    s('es1370', ui.es1370.isChecked())
+    s('gus', ui.gus.isChecked())
 
 
 def on_init():
