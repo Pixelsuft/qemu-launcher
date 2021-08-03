@@ -1,0 +1,9 @@
+ui/manager.py
+ui/sets.py
+ui/runner.py
+__pycache__
+ui/__pycache__
+launcher_configs
+main.spec
+build
+dist
