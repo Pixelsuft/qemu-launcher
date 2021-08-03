@@ -114,6 +114,12 @@ def process_config(c):
     for i in c['devices']:
         ui.usingDevice.addItem(i)
         added_items.append(i)
+    ui.otherargsEdit.setText(c['otherargs'])
+    ui.mytoolsEdit.setChecked(c['mytools'])
+    ui.ctrlgrabEdit.setChecked(c['ctrlgrab'])
+    ui.altgrabEdit.setChecked(c['altgrab'])
+    ui.sudoEdit.setChecked(c['sudo'])
+    ui.nodefaultEdit.setChecked(c['nodefaults'])
 
 
 def apply_config():
@@ -158,6 +164,12 @@ def apply_config():
     s('cd', ui.cdEdit.text())
     s('usb', ui.usbEdit.text())
     s('devices', added_items)
+    s('otherargs', ui.otherargsEdit.text())
+    s('mytools', ui.mytoolsEdit.isChecked())
+    s('sudo', ui.sudoEdit.isChecked())
+    s('ctrlgrab', ui.ctrlgrabEdit.isChecked())
+    s('altgrab', ui.altgrabEdit.isChecked())
+    s('nodefaults', ui.nodefaultEdit.isChecked())
 
 
 def on_init():

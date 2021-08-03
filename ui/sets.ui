@@ -66,7 +66,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>0</number>
     </property>
     <property name="iconSize">
      <size>
@@ -955,6 +955,19 @@
        <string>VNC Address</string>
       </property>
      </widget>
+     <widget class="QCheckBox" name="mytoolsEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>220</y>
+        <width>261</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use my mini-tools (SDL Only) (Windows Only)</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="sound">
      <attribute name="icon">
@@ -1478,6 +1491,95 @@
      <attribute name="title">
       <string/>
      </attribute>
+     <widget class="QCheckBox" name="ctrlgrabEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>251</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Right Ctrl as Main Key (SDL only)</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="altgrabEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>251</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Alt as Main Key (SDL only)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="otherargsEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>170</y>
+        <width>481</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="clearButtonEnabled">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="otherargsLabel">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Other Arguments</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="nodefaultEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>80</y>
+        <width>251</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>No Defaults</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="sudoEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>110</y>
+        <width>251</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Run As SUDO (Linux only)</string>
+      </property>
+     </widget>
     </widget>
    </widget>
   </widget>
