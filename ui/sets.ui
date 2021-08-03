@@ -566,7 +566,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>200</y>
+        <y>210</y>
         <width>181</width>
         <height>17</height>
        </rect>
@@ -579,13 +579,122 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>230</y>
+        <y>240</y>
         <width>181</width>
         <height>17</height>
        </rect>
       </property>
       <property name="text">
        <string>Enable ACPI</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="kvmEdit">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>10</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Accel KVM</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="mtkvmEdit">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>50</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Multithreaded KVM</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="whpxEdit">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>90</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Hyper-V</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="tcgEdit">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>130</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use TCG</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="mttcgEdit">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>170</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use Multithreaded TCG</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="haxmEdit">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>210</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use HAXM</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="speedLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>290</y>
+        <width>221</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Speedhack bad accel (-1 - off, 0 - 10 - on)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="speedEdit">
+      <property name="geometry">
+       <rect>
+        <x>230</x>
+        <y>288</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>-1</string>
       </property>
      </widget>
     </widget>

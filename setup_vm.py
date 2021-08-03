@@ -28,6 +28,13 @@ def process_config(c):
     ui.coresEdit.setText(c['cores'])
     ui.hpetEdit.setChecked(c['hpet'])
     ui.acpiEdit.setChecked(c['acpi'])
+    ui.kvmEdit.setChecked(c['kvm'])
+    ui.mtkvmEdit.setChecked(c['mtkvm'])
+    ui.whpxEdit.setChecked(c['whpx'])
+    ui.tcgEdit.setChecked(c['tcg'])
+    ui.mttcgEdit.setChecked(c['mttcg'])
+    ui.haxmEdit.setChecked(c['haxm'])
+    ui.speedEdit.setText(c['speed'])
 
 
 def apply_config():
@@ -38,6 +45,13 @@ def apply_config():
     s('cores', ui.coresEdit.text())
     s('hpet', ui.hpetEdit.isChecked())
     s('acpi', ui.acpiEdit.isChecked())
+    s('kvm', ui.kvmEdit.isChecked())
+    s('mtkvm', ui.mtkvmEdit.isChecked())
+    s('whpx', ui.whpxEdit.isChecked())
+    s('tcg', ui.tcgEdit.isChecked())
+    s('mttcg', ui.mttcgEdit.isChecked())
+    s('haxm', ui.haxmEdit.isChecked())
+    s('speed', ui.speedEdit.text())
 
 
 def on_init():
