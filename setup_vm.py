@@ -22,6 +22,7 @@ filters = {
     'cd': '*.iso;*.cdrom'
 }
 last_path = ''
+added_items = []
 
 
 def s(param, value):
@@ -41,6 +42,20 @@ def dialog(filetype, obj):
     obj.setText(filepath)
 
 
+def add_device():
+    cur = ui.devices.currentItem().text()
+    if cur in added_items:
+        return
+    ui.usingDevice.addItem(cur)
+    added_items.append(cur)
+
+
+def remove_device():
+    cur = ui.devices.currentItem().text()
+    ui.usingDevice.takeItem(ui.devices.currentRow())
+    added_items.remove(cur)
+
+
 def setup_events():
     ui.cancelButton.clicked.connect(lambda: sys.exit(0))
     ui.okButton.clicked.connect(lambda: sys.exit(on_exit(0)))
@@ -51,6 +66,8 @@ def setup_events():
     ui.hdcButton.clicked.connect(lambda: dialog('hd', ui.hdcEdit))
     ui.hddButton.clicked.connect(lambda: dialog('hd', ui.hddEdit))
     ui.cdButton.clicked.connect(lambda: dialog('cd', ui.cdEdit))
+    ui.addDevice.clicked.connect(add_device)
+    ui.removeDevice.clicked.connect(remove_device)
 
 
 def process_config(c):
@@ -93,6 +110,10 @@ def process_config(c):
     ui.hdcEdit.setText(c['hdc'])
     ui.hddEdit.setText(c['hdd'])
     ui.cdEdit.setText(c['cd'])
+    ui.usbEdit.setText(c['usb'])
+    for i in c['devices']:
+        ui.usingDevice.addItem(i)
+        added_items.append(i)
 
 
 def apply_config():
@@ -135,6 +156,8 @@ def apply_config():
     s('hdc', ui.hdcEdit.text())
     s('hdd', ui.hddEdit.text())
     s('cd', ui.cdEdit.text())
+    s('usb', ui.usbEdit.text())
+    s('devices', added_items)
 
 
 def on_init():
