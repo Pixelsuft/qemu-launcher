@@ -47,12 +47,19 @@ def process_config(c):
     ui.vncEdit.setText(c['vnc'])
     ui.sdlEdit.setChecked(c['sdl'])
     ui.cs4231a.setChecked(c['cs4231a'])
-    ui.hda.setChecked(c['hda'])
+    ui.hda.setChecked(c['ihda'])
     ui.adlib.setChecked(c['adlib'])
     ui.sb16.setChecked(c['sb16'])
     ui.pcspk.setChecked(c['pcspk'])
     ui.es1370.setChecked(c['es1370'])
     ui.gus.setChecked(c['gus'])
+    ui.fdaEdit.setText(c['fda'])
+    ui.fdbEdit.setText(c['fdb'])
+    ui.hdaEdit.setText(c['hda'])
+    ui.hdbEdit.setText(c['hdb'])
+    ui.hdcEdit.setText(c['hdc'])
+    ui.hddEdit.setText(c['hdd'])
+    ui.cdEdit.setText(c['cd'])
 
 
 def apply_config():
@@ -81,13 +88,20 @@ def apply_config():
     s('sdl', ui.sdlEdit.isChecked())
     s('vnc', ui.vncEdit.text())
     s('cs4231a', ui.cs4231a.isChecked())
-    s('hda', ui.hda.isChecked())
+    s('ihda', ui.hda.isChecked())
     s('adlib', ui.adlib.isChecked())
     s('ac97', ui.ac97.isChecked())
     s('sb16', ui.sb16.isChecked())
     s('pcspk', ui.pcspk.isChecked())
     s('es1370', ui.es1370.isChecked())
     s('gus', ui.gus.isChecked())
+    s('fda', ui.fdaEdit.text())
+    s('fdb', ui.fdbEdit.text())
+    s('hda', ui.hdaEdit.text())
+    s('hdb', ui.hdbEdit.text())
+    s('hdc', ui.hdcEdit.text())
+    s('hdd', ui.hddEdit.text())
+    s('cd', ui.cdEdit.text())
 
 
 def on_init():

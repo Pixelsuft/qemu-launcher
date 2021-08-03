@@ -1077,6 +1077,167 @@
      <attribute name="title">
       <string/>
      </attribute>
+     <widget class="QLineEdit" name="fdaEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>20</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="fdbEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="hdaEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>90</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="hdbEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>120</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="hdcEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>150</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="hddEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>180</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="cdEdit">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>220</y>
+        <width>321</width>
+        <height>20</height>
+       </rect>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="fdaButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>18</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select Floppy A</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="fdbButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>48</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select Floppy B</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="cdButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>218</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select CD</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hddButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>178</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select HD 4</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hdcButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>148</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select HD 3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hdbButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>118</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select HD 2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="hdaButton">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>88</y>
+        <width>151</width>
+        <height>24</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Select HD 1</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="input">
      <attribute name="icon">
