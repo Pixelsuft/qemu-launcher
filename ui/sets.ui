@@ -706,6 +706,255 @@
      <attribute name="title">
       <string/>
      </attribute>
+     <widget class="QLabel" name="videoLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Video Adapter</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="videoEdit">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>8</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="currentText">
+       <string>Default VGA</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Default VGA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VMWARE SVGA 2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cirrus</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VirtIO</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>QXL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>ATI VGA</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>RAM FB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QCheckBox" name="nographicEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Log text mode to console</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="useconsoleEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use console</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="monitorvcEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>100</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Graphic Monitor</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="monitorstdioEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Console Monitor</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="serialvcEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>160</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Graphic Serial</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="serialstdioEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>190</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Console Serial</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="displayEdit">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>8</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="currentText">
+       <string>GTK</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>GTK</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SDL</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>VNC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Curses</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="displayLabel">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>10</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Display</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="sdlEdit">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>40</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Use SDL</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="vncEdit">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>68</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>localhost:1</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="coresLabel_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>70</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>VNC Address</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="sound">
      <attribute name="icon">

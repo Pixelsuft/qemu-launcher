@@ -35,6 +35,16 @@ def process_config(c):
     ui.mttcgEdit.setChecked(c['mttcg'])
     ui.haxmEdit.setChecked(c['haxm'])
     ui.speedEdit.setText(c['speed'])
+    ui.videoEdit.setCurrentText(c['video'])
+    ui.nographicEdit.setChecked(c['nographic'])
+    ui.useconsoleEdit.setChecked(c['useconsole'])
+    ui.monitorvcEdit.setChecked(c['monitorvc'])
+    ui.monitorstdioEdit.setChecked(c['monitorstdio'])
+    ui.serialvcEdit.setChecked(c['serialvc'])
+    ui.serialstdioEdit.setChecked(c['serialstdio'])
+    ui.displayEdit.setCurrentText(c['display'])
+    ui.sdlEdit.setChecked(c['sdl'])
+    ui.vncEdit.setText(c['vnc'])
 
 
 def apply_config():
@@ -52,6 +62,16 @@ def apply_config():
     s('mttcg', ui.mttcgEdit.isChecked())
     s('haxm', ui.haxmEdit.isChecked())
     s('speed', ui.speedEdit.text())
+    s('video', ui.videoEdit.currentText())
+    s('nographic', ui.nographicEdit.isChecked())
+    s('useconsole', ui.useconsoleEdit.isChecked())
+    s('monitorvc', ui.monitorvcEdit.isChecked())
+    s('monitorstdio', ui.monitorstdioEdit.isChecked())
+    s('serialvc', ui.serialvcEdit.isChecked())
+    s('serialstdio', ui.serialstdioEdit.isChecked())
+    s('display', ui.displayEdit.currentText())
+    s('sdl', ui.sdlEdit.isChecked())
+    s('vnc', ui.vncEdit.text())
 
 
 def on_init():
