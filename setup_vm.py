@@ -23,13 +23,21 @@ def setup_events():
 def process_config(c):
     ui.archEdit.setCurrentIndex(int(c['arch'] == '64-bit'))
     ui.cpuEdit.setCurrentText(c['cpu'])
-    ui.memoryEdit.setCurrentText(c['memory'])
+    ui.memoryEdit.setText(c['memory'])
+    ui.biosEdit.setCurrentText(c['bios'])
+    ui.coresEdit.setText(c['cores'])
+    ui.hpetEdit.setChecked(c['hpet'])
+    ui.acpiEdit.setChecked(c['acpi'])
 
 
 def apply_config():
     s('arch', ui.archEdit.currentText())
     s('cpu', ui.cpuEdit.currentText())
-    s('memory', ui.memoryEdit.currentText())
+    s('memory', ui.memoryEdit.text())
+    s('bios', ui.biosEdit.currentText())
+    s('cores', ui.coresEdit.text())
+    s('hpet', ui.hpetEdit.isChecked())
+    s('acpi', ui.acpiEdit.isChecked())
 
 
 def on_init():

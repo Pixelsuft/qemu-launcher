@@ -480,6 +480,114 @@
        <string>512</string>
       </property>
      </widget>
+     <widget class="QLabel" name="biosLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>130</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>BIOS</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="biosEdit">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>128</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="currentText">
+       <string>BIOS</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>BIOS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EFI 32-bit (CIRRUS ONLY)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EFI 64-bit (CIRRUS ONLY)</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EFI 32-bit (FIXED)</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="coresLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>170</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>CPU Cores</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="coresEdit">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>168</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>-1</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="hpetEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>200</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable HPET</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="acpiEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>181</width>
+        <height>17</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Enable ACPI</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="video">
      <attribute name="icon">
