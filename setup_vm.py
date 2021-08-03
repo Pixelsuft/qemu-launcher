@@ -22,12 +22,14 @@ def setup_events():
 
 def process_config(c):
     ui.archEdit.setCurrentIndex(int(c['arch'] == '64-bit'))
-    ui.cpu_edit.setCurrentText(conf['cpu'])
+    ui.cpuEdit.setCurrentText(c['cpu'])
+    ui.memoryEdit.setCurrentText(c['memory'])
 
 
 def apply_config():
     s('arch', ui.archEdit.currentText())
-    s('cpu', ui.cpu_edit.currentText())
+    s('cpu', ui.cpuEdit.currentText())
+    s('memory', ui.memoryEdit.currentText())
 
 
 def on_init():

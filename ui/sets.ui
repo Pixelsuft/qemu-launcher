@@ -141,7 +141,7 @@
        <string>CPU</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="cpu_edit">
+     <widget class="QComboBox" name="cpuEdit">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -151,7 +151,7 @@
        </rect>
       </property>
       <property name="currentText">
-       <string>qemu32</string>
+       <string>486</string>
       </property>
       <item>
        <property name="text">
@@ -448,6 +448,37 @@
         <string>host</string>
        </property>
       </item>
+     </widget>
+     <widget class="QLabel" name="memoryLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>90</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Memory (MB)</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="memoryEdit">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>88</y>
+        <width>113</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>512</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="video">
