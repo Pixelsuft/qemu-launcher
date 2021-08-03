@@ -82,6 +82,373 @@
      <attribute name="title">
       <string/>
      </attribute>
+     <widget class="QComboBox" name="archEdit">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>8</y>
+        <width>111</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="currentText">
+       <string>32-bit</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>32-bit</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>64-bit</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="archLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>10</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>Architecture</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="cpuLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>50</y>
+        <width>100</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>8</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>CPU</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cpu_edit">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>48</y>
+        <width>151</width>
+        <height>20</height>
+       </rect>
+      </property>
+      <property name="currentText">
+       <string>qemu32</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>486</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Broadwell</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Broadwell-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Broadwell-noTSX</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Broadwell-noTSX-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cascadelake-Server</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cascadelake-Server-noT</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Conroe</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Cooperlake</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Denverton</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Dhyana</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EPYC</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EPYC-IBPB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>EPYC-Rome</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Haswell</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Haswell-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Haswell-noTSX</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Haswell-noTSX-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Icelake-Client</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Icelake-Client-noTSX</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Icelake-Server</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Icelake-Server-noTSX</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IvyBridge</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>IvyBridge-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KnightsMill</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nehalem</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Nehalem-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Opteron_G1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Opteron_G2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Opteron_G3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Opteron_G4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Opteron_G5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Penryn</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SandyBridge</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>SandyBridge-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Skylake-Client</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Skylake-Client-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Skylake-Client-noTSX-I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Skylake-Server</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Skylake-Server-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Skylake-Server-noTSX-I</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Snowridge</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Westmere</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Westmere-IBRS</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>athlon</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>core2duo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>coreduo</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>kvm32</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>kvm64</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>n270</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>pentium</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>pentium2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>pentium3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>phenom</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>qemu32</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>qemu64</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>base</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>max</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>host</string>
+       </property>
+      </item>
+     </widget>
     </widget>
     <widget class="QWidget" name="video">
      <attribute name="icon">
