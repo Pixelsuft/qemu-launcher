@@ -9,5 +9,5 @@ Written on python with PyQt5 and PySide2
 4) Now, to start launcher, run `main.py` file same as in step 3
 
 ## Screenshots
-[![image1](https://user-images.githubusercontent.com/68371847/128123346-d3f3b4f1-b3b5-4406-81a2-1f31544173d9.png)](https://github.com/Pixelsuft/qemu-launcher) <br />
+[![image1](https://user-images.githubusercontent.com/68371847/128123903-dcb49c84-4ec0-403c-a8fc-237eb7e55d05.png)](https://github.com/Pixelsuft/qemu-launcher) <br />
 [![image](https://user-images.githubusercontent.com/68371847/128123445-120a53ba-45c3-4d2b-9118-9b81c4e3e904.png)](https://github.com/Pixelsuft/qemu-launcher) <br />
