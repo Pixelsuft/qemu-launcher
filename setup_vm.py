@@ -95,7 +95,6 @@ def process_config(c):
     ui.displayEdit.setCurrentText(c['display'])
     ui.sdlEdit.setChecked(c['sdl'])
     ui.vncEdit.setText(c['vnc'])
-    ui.sdlEdit.setChecked(c['sdl'])
     ui.cs4231a.setChecked(c['cs4231a'])
     ui.hda.setChecked(c['ihda'])
     ui.adlib.setChecked(c['adlib'])

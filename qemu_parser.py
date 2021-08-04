@@ -13,7 +13,24 @@ boot_from = builtins.qemu_conf['boot_from']
 
 args = []
 cmd = ''
+vid = {
+    'Default VGA': 'std',
+    'VMWARE SVGA 2': 'vmware',
+    'Cirrus': 'cirrus',
+    'VirtIO': 'virtio',
+    'QXL': 'qxl',
+    'RAM FB': 'ramfb',
+    'None': 'none'
+}
 
+orders = {
+    'CDROM/Hard Disk/Floppy': 'dca',
+    'CDROM/Floppy/Hard Disk': 'dac',
+    'Hard Disk/CDROM/Floppy': 'cda',
+    'Hard Disk/Floppy/CDROM': 'cad',
+    'Floppy/Hard Disk/CDROM': 'acd',
+    'Floppy/CDROM/Hard Disk': 'adc',
+}
 
 if s['sudo']:
     args.append('sudo')
@@ -71,6 +88,95 @@ if not s['speed'] == '-1':
     args.append('base=localtime,clock=vm')
     args.append('-icount')
     args.append(f'shift={s["speed"]},align=off,sleep=off')
+
+if s['nographic']:
+    args.append('-nographic')
+
+if s['video'] == 'ATI VGA':
+    args.append('-device')
+    args.append('ati-vga')
+else:
+    args.append('-vga')
+    args.append(vid[s['video']])
+
+if s['monitorvc']:
+    args.append('-monitor')
+    args.append('vc')
+if s['monitorstdio']:
+    args.append('-monitor')
+    args.append('stdio')
+if s['serialvc']:
+    args.append('-serial')
+    args.append('vc')
+if s['serialstdio']:
+    args.append('-serial')
+    args.append('stdio')
+
+args.append('-display')
+if s['display'] == 'VNC':
+    args.append(f'vnc={s["vnc"]}')
+else:
+    args.append(s['display'].lower())
+
+if s['sdl']:
+    args.append('-sdl')
+
+if s['cs4231a']:
+    args.append('-soundhw')
+    args.append('cs4231a')
+if s['ihda']:
+    args.append('-soundhw')
+    args.append('hda')
+if s['adlib']:
+    args.append('-soundhw')
+    args.append('adlib')
+if s['sb16']:
+    args.append('-soundhw')
+    args.append('sb16')
+if s['pcspk']:
+    args.append('-soundhw')
+    args.append('pcspk')
+if s['es1370']:
+    args.append('-soundhw')
+    args.append('es1370')
+if s['gus']:
+    args.append('-soundhw')
+    args.append('gus')
+
+if s['fda'].strip().replace(' ', ''):
+    args.append('-fda')
+    args.append(s['fda'])
+if s['fdb'].strip().replace(' ', ''):
+    args.append('-fdb')
+    args.append(s['fdb'])
+if s['hda'].strip().replace(' ', ''):
+    args.append('-hda')
+    args.append(s['hda'])
+if s['hdb'].strip().replace(' ', ''):
+    args.append('-hdb')
+    args.append(s['hdb'])
+if s['hdc'].strip().replace(' ', ''):
+    args.append('-hdc')
+    args.append(s['hdc'])
+if s['hdd'].strip().replace(' ', ''):
+    args.append('-hdd')
+    args.append(s['hdd'])
+if s['cd'].strip().replace(' ', ''):
+    args.append('-cdrom')
+    args.append(s['cd'])
+
+args.append('-boot')
+if boot_from == 'default':
+    args.append(f'order={orders[s["order"]]},menu=off')
+else:
+    args.append(boot_from)
+
+if s['usb']:
+    args.append('-usb')
+
+for i in s['devices']:
+    args.append('-device')
+    args.append(i)
 
 args.append('-no-reboot')
 args.append('-name')

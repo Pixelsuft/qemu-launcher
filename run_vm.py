@@ -30,11 +30,11 @@ def on_press(key):
     if is_in_boot:
         need = str(key)
         if need == "'1'":
-            process('fd')
+            process('a')
         elif need == "'2'":
-            process('hd')
+            process('c')
         elif need == "'3'":
-            process('cd')
+            process('d')
         return False
     else:
         if key == keyboard.Key.f2:
