@@ -13,7 +13,7 @@ current_machine = ''
 
 def create_vm():
     text, ok = QtWidgets.QInputDialog.getText(MainWindow, 'Create VM', 'Enter name of the Virtual Machine:')
-    if ok:
+    if ok and text not in all_machines:
         all_machines.append(text)
         ui.listVM.addItem(text)
 

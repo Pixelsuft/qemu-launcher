@@ -110,7 +110,7 @@ def process_config(c):
     ui.hdcEdit.setText(c['hdc'])
     ui.hddEdit.setText(c['hdd'])
     ui.cdEdit.setText(c['cd'])
-    ui.usbEdit.setText(c['usb'])
+    ui.usbEdit.setChecked(c['usb'])
     for i in c['devices']:
         ui.usingDevice.addItem(i)
         added_items.append(i)
@@ -120,6 +120,7 @@ def process_config(c):
     ui.altgrabEdit.setChecked(c['altgrab'])
     ui.sudoEdit.setChecked(c['sudo'])
     ui.nodefaultEdit.setChecked(c['nodefaults'])
+    ui.orderEdit.setCurrentText(c['order'])
 
 
 def apply_config():
@@ -162,7 +163,7 @@ def apply_config():
     s('hdc', ui.hdcEdit.text())
     s('hdd', ui.hddEdit.text())
     s('cd', ui.cdEdit.text())
-    s('usb', ui.usbEdit.text())
+    s('usb', ui.usbEdit.isChecked())
     s('devices', added_items)
     s('otherargs', ui.otherargsEdit.text())
     s('mytools', ui.mytoolsEdit.isChecked())
@@ -170,6 +171,7 @@ def apply_config():
     s('ctrlgrab', ui.ctrlgrabEdit.isChecked())
     s('altgrab', ui.altgrabEdit.isChecked())
     s('nodefaults', ui.nodefaultEdit.isChecked())
+    s('order', ui.orderEdit.currentText())
 
 
 def on_init():
