@@ -18,6 +18,10 @@ try:
             builtins.vm_to_setup = sys.argv[2]
             import setup_vm
 except Exception as e:
-    msg = QMessageBox.critical(QWidget(), 'Error', f'App crashed with error:\n{e}')
+    if sys.platform == 'win32':
+        msg = QMessageBox.critical(QWidget(), 'Error', f'App crashed with error:\n{e}')
+    else:
+        print('Critical error: ')
+        print(e)
     sys.exit(1)
 
