@@ -66,7 +66,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>4</number>
     </property>
     <property name="iconSize">
      <size>
@@ -1481,7 +1481,7 @@
        <rect>
         <x>10</x>
         <y>10</y>
-        <width>100</width>
+        <width>291</width>
         <height>16</height>
        </rect>
       </property>
@@ -1491,7 +1491,7 @@
        </font>
       </property>
       <property name="text">
-       <string>Popular devices</string>
+       <string>Popular devices (Removing is applying after save)</string>
       </property>
      </widget>
      <widget class="QListWidget" name="usingDevice">

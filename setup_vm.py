@@ -57,9 +57,10 @@ def add_device():
 
 
 def remove_device():
-    cur = ui.devices.currentItem().text()
-    ui.usingDevice.takeItem(ui.devices.currentRow())
-    added_items.remove(cur)
+    cur = ui.usingDevice.currentItem().text()
+    if cur in added_items:
+        ui.usingDevice.takeItem(ui.devices.currentRow())
+        added_items.remove(cur)
 
 
 def setup_events():
