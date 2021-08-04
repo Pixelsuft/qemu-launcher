@@ -178,10 +178,29 @@ for i in s['devices']:
     args.append('-device')
     args.append(i)
 
+if s['ctrlgrab']:
+    args.append('-ctrl-grab')
+
+if s['altgrab']:
+    args.append('-alt-grab')
+
 args.append('-no-reboot')
 args.append('-name')
 args.append(vm_name)
-print(args)
+
+
+for i in args:
+    cmd += ' '
+    if ' ' in i:
+        cmd += f'"{i}"'
+    else:
+        cmd += i
+
+if s['otherargs']:
+    cmd += ' '
+    cmd += s['otherargs']
+
+cmd = cmd.strip()
 
 
 def win_thread():
