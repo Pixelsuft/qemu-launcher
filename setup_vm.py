@@ -21,6 +21,12 @@ filters = {
     'hd': '*.img;*.vhd;*.raw;*.qcow;*.qcow2',
     'cd': '*.iso;*.cdrom'
 }
+if not sys.platform == 'win32':
+    filters = {
+        'fd': '*.*',
+        'hd': '*.*',
+        'cd': '*.*'
+    }
 last_path = ''
 added_items = []
 
