@@ -274,7 +274,7 @@ def win_thread():
     l, t, r, b = win32gui.GetWindowRect(w['vga'])
     w, h = r - l, b - t
 
-    win32gui.MoveWindow(l, t, w, h, False)
+    win32gui.MoveWindow(w['vga'], l, t, w, h, False)
 
     while True:
         if not win32gui.GetWindowText(w['vga']) == vga_text:
