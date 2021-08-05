@@ -237,8 +237,18 @@ def win_thread():
         win32gui.EnumWindows(enum_handler, None)
         is_ok = w['vga'] and (w['monitor'] if use_monitor else True) and (w['serial'] if use_serial else True)
 
+    vga_text = f'QEMU Launcher - {vm_name}'
+    monitor_text = f'QEMU Launcher - {vm_name} - Monitor'
+    serial_text = f'QEMU Launcher - {vm_name} - Serial'
+
     while True:
-        win32gui.SetWindowText(w['vga'], f'QEMU Launcher - {vm_name}')
+        if not win32gui.GetWindowText(w['vga']) == vga_text:
+            win32gui.SetWindowText(w['vga'], vga_text)
+        if use_monitor:
+            if not win32gui.GetWindowText(w['monitor']) == monitor_text:
+                win32gui.SetWindowText(w['monitor'], monitor_text)
+            if not win32gui.GetWindowText(w['serial']) == serial_text:
+                win32gui.SetWindowText(w['serial'], serial_text)
 
 
 def qemu_thread():
