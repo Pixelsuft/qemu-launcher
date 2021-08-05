@@ -230,8 +230,8 @@ def win_thread():
                 if f'({vm_name}-0)' in text:
                     w['vga'] = hwnd
                 elif f'({vm_name}-1)' in text:
-                    w['vga' if use_monitor else 'serial'] = hwnd
-                elif f'({vm_name}-2)' in text:
+                    w['monitor' if use_monitor else 'serial'] = hwnd
+                elif f'({vm_name}-2)' in text and use_monitor:
                     w['serial'] = hwnd
 
         win32gui.EnumWindows(enum_handler, None)
