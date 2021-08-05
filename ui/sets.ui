@@ -1357,6 +1357,11 @@
       </item>
       <item>
        <property name="text">
+        <string>sga</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
         <string>virtio-keyboard-device</string>
        </property>
       </item>
