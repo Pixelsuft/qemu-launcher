@@ -209,6 +209,14 @@ def win_thread():
     import win32api
     import win32con
     import win32gui
+
+    vga, monitor, serial = None, None, None
+    use_vga, use_monitor, use_serial = (not s['display'] == 'None' or s['sdl']),\
+                                       (s['monitorvc'] or s['monitorstdio']), (s['serialvc'] or s['serialstdio'])
+
+    if not use_vga and not use_monitor and not use_serial:
+        return
+
     print('continue')
 
 
