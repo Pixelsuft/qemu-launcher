@@ -271,10 +271,14 @@ def win_thread():
 
     new_h = win32gui.GetClientRect(w['vga'])[3]
 
-    l, t, r, b = win32gui.GetWindowRect(w['vga'])
-    w, h = r - l, b - t
+    left, top, width, height = win32gui.GetWindowRect(w['vga'])
 
-    win32gui.MoveWindow(w['vga'], l, t, w, h, False)
+    width -= left
+    height -= top
+
+    print(left, top, width, height)
+
+    win32gui.MoveWindow(w['vga'], left, top, width, height, True)
 
     while True:
         if not win32gui.GetWindowText(w['vga']) == vga_text:
@@ -292,5 +296,9 @@ def qemu_thread():
     os.kill(pid, signal.SIGTERM)
 
 
-Thread(target=win_thread).start()
+try:
+    Thread(target=win_thread).start()
+except Exception as e:
+    print(f'Error, maybe after closing: {e}')
+
 qemu_thread()
