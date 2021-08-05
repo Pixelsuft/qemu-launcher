@@ -210,12 +210,32 @@ def win_thread():
     import win32con
     import win32gui
 
-    vga, monitor, serial = None, None, None
+    w = {
+        'vga': None,
+        'monitor': None,
+        'serial': None
+    }
     use_vga, use_monitor, use_serial = (not s['display'] == 'None' or s['sdl']),\
                                        (s['monitorvc'] or s['monitorstdio']), (s['serialvc'] or s['serialstdio'])
 
-    if not use_vga and not use_monitor and not use_serial:
+    if not use_vga and not use_monitor and not use_serial or not use_vga:
         return
+
+    is_ok = False
+
+    while not is_ok:
+        def enum_handler(hwnd, ctx):
+            text = win32gui.GetWindowText(hwnd).strip()
+            if 'QEMU' in text:
+                if f'({vm_name}-0)' in text:
+                    w['vga'] = hwnd
+                elif f'({vm_name}-1)' in text:
+                    w['vga' if use_monitor else 'serial'] = hwnd
+                elif f'({vm_name}-2)' in text:
+                    w['serial'] = hwnd
+
+        win32gui.EnumWindows(enum_handler, None)
+        is_ok = w['vga'] and (w['monitor'] if use_monitor else True) and (w['serial'] if use_serial else True)
 
     print('continue')
 
