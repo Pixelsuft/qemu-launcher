@@ -209,6 +209,7 @@ def win_thread():
     import win32api
     import win32con
     import win32gui
+    from pynput import keyboard
 
     w = {
         'vga': None,
@@ -220,6 +221,29 @@ def win_thread():
 
     if not use_vga and not use_monitor and not use_serial or not use_vga:
         return
+
+    keys = keyboard.Controller()
+
+    def get_current_show():
+        if use_vga and not use_monitor and not use_serial or win32gui.IsWindowVisible(w['vga']):
+            return 'vga'
+        if win32gui.IsWindowVisible(w['monitor']):
+            return 'monitor'
+        if win32gui.IsWindowVisible(w['serial']):
+            return 'serial'
+        return 'vga'
+
+    def send_to_monitor(command):
+        cur = get_current_show()
+        if not cur == 'monitor':
+            win32gui.ShowWindow(w[cur], win32con.SW_HIDE)
+            win32gui.ShowWindow(w['monitor'], win32con.SW_SHOW)
+        win32gui.SetForegroundWindow(w['monitor'])
+        keys.type(command)
+        if not cur == 'monitor':
+            win32gui.ShowWindow(w['monitor'], win32con.SW_HIDE)
+            win32gui.ShowWindow(w[cur], win32con.SW_SHOW)
+        win32gui.SetForegroundWindow(w[cur])
 
     is_ok = False
 
@@ -247,6 +271,7 @@ def win_thread():
         if use_monitor:
             if not win32gui.GetWindowText(w['monitor']) == monitor_text:
                 win32gui.SetWindowText(w['monitor'], monitor_text)
+        if use_serial:
             if not win32gui.GetWindowText(w['serial']) == serial_text:
                 win32gui.SetWindowText(w['serial'], serial_text)
 
