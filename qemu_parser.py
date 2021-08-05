@@ -265,6 +265,17 @@ def win_thread():
     monitor_text = f'QEMU Launcher - {vm_name} - Monitor'
     serial_text = f'QEMU Launcher - {vm_name} - Serial'
 
+    old_h = win32gui.GetClientRect(w['vga'])[3]
+
+    # code
+
+    new_h = win32gui.GetClientRect(w['vga'])[3]
+
+    l, t, r, b = win32gui.GetWindowRect(w['vga'])
+    w, h = r - l, b - t
+
+    win32gui.MoveWindow(l, t, w, h, False)
+
     while True:
         if not win32gui.GetWindowText(w['vga']) == vga_text:
             win32gui.SetWindowText(w['vga'], vga_text)
