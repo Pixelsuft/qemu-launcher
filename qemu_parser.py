@@ -267,7 +267,7 @@ def win_thread():
 
     old_h = win32gui.GetClientRect(w['vga'])[3]
 
-    # code
+    # menu code
 
     new_h = win32gui.GetClientRect(w['vga'])[3]
 
@@ -275,8 +275,6 @@ def win_thread():
 
     width -= left
     height -= top
-
-    print(left, top, width, height)
 
     win32gui.MoveWindow(w['vga'], left, top, width, height, True)
 
@@ -296,9 +294,5 @@ def qemu_thread():
     os.kill(pid, signal.SIGTERM)
 
 
-try:
-    Thread(target=win_thread).start()
-except Exception as e:
-    print(f'Error, maybe after closing: {e}')
-
+Thread(target=win_thread).start()
 qemu_thread()
