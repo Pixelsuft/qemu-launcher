@@ -207,9 +207,13 @@ def win_thread():
     if not sys.platform == 'win32' or not s['mytools'] or (not s['sdl'] and not s['display'] == 'SDL'):
         return
     import win32api
+    import win32ui
+    import win32process
     import win32con
     import win32gui
     from pynput import keyboard
+    import ctypes
+    import ctypes.wintypes
 
     w = {
         'vga': None,
@@ -265,9 +269,20 @@ def win_thread():
     monitor_text = f'QEMU Launcher - {vm_name} - Monitor'
     serial_text = f'QEMU Launcher - {vm_name} - Serial'
 
+    win32gui.InitCommonControls()
+
     old_h = win32gui.GetClientRect(w['vga'])[3]
 
-    # menu code
+    bar = win32gui.CreateMenu()
+    file = win32gui.CreateMenu()
+
+    def callback():
+        print('xd')
+
+    win32gui.AppendMenu(file, win32con.MF_STRING, 1000, "&Exit")
+    win32gui.AppendMenu(bar, win32con.MF_POPUP, file, "&File")
+
+    win32gui.SetMenu(w['vga'], bar)
 
     new_h = win32gui.GetClientRect(w['vga'])[3]
 
@@ -276,7 +291,12 @@ def win_thread():
     width -= left
     height -= top
 
-    win32gui.MoveWindow(w['vga'], left, top, width, height, True)
+    win32gui.MoveWindow(w['vga'], left, top, width, height - old_h + new_h, True)
+
+    def test():
+        print('blah')
+
+    wnd = win32ui.CreateWindowFromHandle(w['vga'])
 
     while True:
         if not win32gui.GetWindowText(w['vga']) == vga_text:
