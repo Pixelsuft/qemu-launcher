@@ -23,6 +23,12 @@ def delete_vm():
     index = all_machines.index(current_machine)
     all_machines.remove(current_machine)
     ui.listVM.takeItem(index)
+
+    machine_path = os.path.join('launcher_configs', current_machine + '.vm.json')
+
+    if os.access(machine_path, os.F_OK):
+        os.remove(machine_path)
+
     if all_machines:
         current_machine = ui.listVM.currentItem().text()
     else:
