@@ -108,6 +108,7 @@ def process_config(c):
     ui.sb16.setChecked(c['sb16'])
     ui.pcspk.setChecked(c['pcspk'])
     ui.es1370.setChecked(c['es1370'])
+    ui.ac97.setChecked(c['ac97'])
     ui.gus.setChecked(c['gus'])
     ui.fdaEdit.setText(c['fda'])
     ui.fdbEdit.setText(c['fdb'])
