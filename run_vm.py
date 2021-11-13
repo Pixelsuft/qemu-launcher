@@ -37,9 +37,8 @@ def on_press(key):
             process('d')
         return False
     else:
-        if key == keyboard.Key.f2:
-            is_in_boot = True
-            ui.label.setPixmap(QtGui.QPixmap("images/win10_menu.png"))
+        is_in_boot = True
+        ui.label.setPixmap(QtGui.QPixmap("images/win10_menu.png"))
 
 
 listener = keyboard.Listener(on_press=on_press)
