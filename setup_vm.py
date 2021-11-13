@@ -49,18 +49,24 @@ def dialog(filetype, obj):
 
 
 def add_device():
-    cur = ui.devices.currentItem().text()
-    if cur in added_items:
+    cur_ = ui.devices.currentItem()
+    if not cur_:
         return
+    cur = cur_.text()
     ui.usingDevice.addItem(cur)
     added_items.append(cur)
 
 
 def remove_device():
-    cur = ui.usingDevice.currentItem().text()
+    cur_ = ui.usingDevice.currentItem()
+    if not cur_:
+        return
+    cur = cur_.text()
     if cur in added_items:
-        ui.usingDevice.takeItem(ui.devices.currentRow())
         added_items.remove(cur)
+        ui.usingDevice.clear()
+        for i in added_items:
+            ui.usingDevice.addItem(str(i))
 
 
 def setup_events():
