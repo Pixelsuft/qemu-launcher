@@ -601,24 +601,11 @@
        <string>Use KVM</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="mtkvmEdit">
-      <property name="geometry">
-       <rect>
-        <x>230</x>
-        <y>50</y>
-        <width>181</width>
-        <height>17</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Use Multithreaded KVM</string>
-      </property>
-     </widget>
      <widget class="QCheckBox" name="whpxEdit">
       <property name="geometry">
        <rect>
         <x>230</x>
-        <y>90</y>
+        <y>50</y>
         <width>181</width>
         <height>17</height>
        </rect>
@@ -631,7 +618,7 @@
       <property name="geometry">
        <rect>
         <x>230</x>
-        <y>130</y>
+        <y>90</y>
         <width>181</width>
         <height>17</height>
        </rect>
@@ -644,7 +631,7 @@
       <property name="geometry">
        <rect>
         <x>230</x>
-        <y>170</y>
+        <y>130</y>
         <width>181</width>
         <height>17</height>
        </rect>
@@ -657,7 +644,7 @@
       <property name="geometry">
        <rect>
         <x>230</x>
-        <y>210</y>
+        <y>170</y>
         <width>181</width>
         <height>17</height>
        </rect>
