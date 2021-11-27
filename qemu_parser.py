@@ -67,9 +67,6 @@ if not s['acpi']:
 if s['kvm']:
     args.append('-accel')
     args.append('kvm,thread=single')
-if s['mtkvm']:
-    args.append('-accel')
-    args.append('kvm,thread=multi')
 if s['tcg']:
     args.append('-accel')
     args.append('tcg,thread=single')
@@ -279,6 +276,8 @@ def win_thread():
     def callback():
         print('xd')
 
+    print(win32gui.GetWindowLong(w['vga'], 0))
+
     win32gui.AppendMenu(file, win32con.MF_STRING, 1000, "&Exit")
     win32gui.AppendMenu(bar, win32con.MF_POPUP, file, "&File")
 
@@ -307,6 +306,7 @@ def win_thread():
         if use_serial:
             if not win32gui.GetWindowText(w['serial']) == serial_text:
                 win32gui.SetWindowText(w['serial'], serial_text)
+        wnd.SendMessage(win32con.WM_KEYDOWN, win32con.VK_RETURN, 0)
 
 
 def qemu_thread():
